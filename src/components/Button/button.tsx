@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { CSSProperties, MouseEventHandler, ReactNode } from 'react';
 import './style.scss';
 // import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
@@ -64,7 +64,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   ...restProps
 }) => {
-  const classes = classNames('btn', className, {
+  const classes = clsx('btn', className, {
     [`btn-${type}`]: type,
     [`btn-${size}`]: size,
     disabled: type === 'link' && disabled,
@@ -87,4 +87,4 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
-export { ButtonProps };
+export type { ButtonProps };

@@ -7,10 +7,25 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "never"
   },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "css.lint.unknownAtRules": "ignore",
+
+  // tailwindcss 正则
+  // 参考：https://dev.to/tiu/how-to-get-tailwind-intellisense-anywhere-53ej
+  // Github: https://github.com/paolotiu/tailwind-intellisense-regex-list
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"], // clsx
+    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"], // cn
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"], // cva
+    ["(?:twMerge|twJoin)\\(([^;]*)[\\);]", "[`'\"`]([^'\"`;]*)[`'\"`]"] // twMerge
+  ],
   "cSpell.words": [
     "ahooks",
     "Appstore",
     "chakra",
+    "clsx",
     "commitlint",
     "dumi",
     "dumirc",
@@ -19,6 +34,7 @@
     "preinstall",
     "PRISMTHEME",
     "stylelint",
+    "tailwindcss",
     "umijs"
   ]
 }
